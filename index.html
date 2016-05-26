@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="img/favicon.png"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Static Contact Form</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+  <!-- inject:css -->
+  <link rel="stylesheet" href="css/static-contact-form.css">
+  <!-- endinject -->
+  <!-- page style -->
+  <style>*{box-sizing:border-box}body{margin:0;padding:0;background-color:#e4e4e4;color:#333;text-align:center;font-size:16px;font-family:Open Sans,Ubuntu,sans-serif;overflow-x:hidden}.head{padding:5.5em 5%;background-color:#ccc}.head,.img-credit{background:#457fca;background:-webkit-linear-gradient(to left,#457fca,#5691c8);background:-webkit-linear-gradient(right,#457fca,#5691c8);background:linear-gradient(to left,#457fca,#5691c8);color:#fff}.head p{margin-bottom:40px}h1{font-size:3.5em;margin:0 0 30px;text-shadow:0 1px 2px rgba(0,0,0,.25);font-family:Ubuntu,Open Sans,sans-serif}.logo:before{content:'';background-image:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 58.707 58.707"><path fill="#EFEBDE" d="M46.07 14l-14-14h-31v58h45"/><g fill="#D5D0BB"><path d="M11.07 23h25c.55 0 1-.45 1-1s-.45-1-1-1h-25c-.55 0-1 .45-1 1s.45 1 1 1zM11.07 15h10c.55 0 1-.45 1-1s-.45-1-1-1h-10c-.55 0-1 .45-1 1s.45 1 1 1zM36.07 29h-25c-.55 0-1 .45-1 1s.45 1 1 1h25c.55 0 1-.45 1-1s-.45-1-1-1zM36.07 37h-25c-.55 0-1 .45-1 1s.45 1 1 1h25c.55 0 1-.45 1-1s-.45-1-1-1zM36.07 45h-25c-.55 0-1 .45-1 1s.45 1 1 1h25c.55 0 1-.45 1-1s-.45-1-1-1z"/></g><path fill="#D5D0BB" d="M32.07 0v14h14"/><path fill="#EDDCC7" d="M36.2 49.2v.02l-2 7.3 4.65-4.66"/><path d="M55.45 35.27l-1.25-1.25c-.77-.78-2.03-.78-2.8 0l-3.6 3.58 2.67 2.65 4.98-4.98z" fill="#D75A4A"/><path fill="#F29C21" d="M47.82 37.6l2.65 2.65-11.6 11.6-2.66-2.64z"/><path fill="#D6C4B1" d="M41.85 54.88l-3-3.02-4.65 4.65-.13.5"/><path d="M53.47 43.26l3.58-3.58c.78-.78.78-2.04 0-2.8l-1.6-1.6-4.98 4.97 3 3z" fill="#A34740"/><path fill="#E18C25" d="M41.86 54.87l-3-3 11.6-11.62 3 3z"/><path d="M33.37 58.7c-.26 0-.52-.1-.7-.3-.4-.38-.4-1 0-1.4l2.2-2.2c.4-.4 1.02-.4 1.4 0s.4 1.02 0 1.4l-2.2 2.2c-.2.2-.45.3-.7.3z" fill="#5E5E5E"/></svg>');background-repeat:no-repeat;background-position:center center;background-size:.9em;padding:0 .7em}a.github{font-size:1em;padding:.9em;color:#fff;border-radius:5px;text-decoration:none!important;background-color:rgba(0,0,0,.3);-webkit-transition:background-color .2s;transition:background-color .2s}a.github:before{content:'';background-image:url(data:image/svg+xml;charset=UTF8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20438.549%20438.549%22%3E%3Cpath%20d%3D%22M409%20114.6c-19.5-33.6-46-60.2-79.7-79.8-33.6-19.6-70.2-29.4-110-29.4s-76.5%209.8-110%2029.4C75.5%2054.4%2049%2081%2029.2%20114.6%2010%20148.2%200%20185%200%20224.6c0%2047.8%2014%2090.8%2041.8%20129%2028%2038%2064%2064.5%20108%2079.2%205.2%201%209%20.2%2011.5-2%202.5-2.3%203.7-5.2%203.7-8.6v-15.4l-.3-25.4-6.5%201c-4.2%201-9.5%201.2-16%201-6.3%200-13-.6-19.7-2-7-1-13.3-4-19.2-8.4-6-4.5-10-10.4-12.5-17.6l-3-6.6c-1.8-4.3-4.8-9.2-9-14.5-4-5.4-8-9-12.3-11l-2-1.3c-1.3-1-2.5-2-3.7-3.4-1-1.4-2-2.7-2.6-4-.5-1.4%200-2.5%201.5-3.3%201.5-1%204.3-1.3%208.2-1.3l5.7%201c3.8.6%208.5%203%2014%206.7%205.7%203.8%2010.3%208.8%2014%2015%204.3%207.7%209.6%2013.6%2015.8%2017.7%206.2%204%2012.4%206%2018.7%206%206.3%200%2011.7-.3%2016.3-1.3%204.5-.8%208.8-2.3%2012.8-4.2%201.7-12.7%206.4-22.5%2014-29.4-11-1-20.6-2.8-29.3-5-8.6-2.4-17.6-6-26.8-11.3-9.2-5-17-11.4-23-19s-11-17.6-15-30c-4-12.3-5.8-26.6-5.8-42.8%200-23%207.5-42.6%2022.5-58.8-7-17.3-6.5-36.7%202-58.3%205.4-1.6%2013.6-.3%2024.5%204%2010.8%204.3%2018.8%208%2023.8%2011s9%205.6%2012.2%207.7c17.7-5%2036-7.4%2054.8-7.4s37%202.5%2054.8%207.4l11-6.8c7.4-4.7%2016-9%2026.2-12.7%2010-3.8%2017.8-5%2023-3%208.7%2021.4%209.5%2040.8%202.4%2058%2015%2016.3%2022.6%2036%2022.6%2059%200%2016-2%2030.4-6%2043-3.8%2012.3-8.8%2022.3-15%2030-6.2%207.4-14%2013.7-23%2018.8-9.4%205.3-18.3%209-27%2011.3-8.6%202.3-18.4%204-29.2%205%2010%208.7%2014.8%2022.2%2014.8%2040.7v60.2c0%203.4%201.2%206.3%203.6%208.6%202.4%202.2%206%203%2011.3%202%2044-14.7%2080-41%20108-79.3%2028-38%2041.8-81%2041.8-129%200-39.6-9.8-76.3-29.4-110z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E);background-repeat:no-repeat;background-position:left center;padding-left:1.45em;background-size:1.1em}a.github:hover{background-color:rgba(0,0,0,.4)}div.main{padding:0 4% 60px;max-width:1000px;margin:0 auto}div.options{padding:30px}#static_contact_form{font-family:Open Sans,Helvetica,sans-serif}.option-button{margin:.2em 0;border:1px solid #1e91e5;border-radius:3px;font-weight:700;color:#fff;display:inline-block;background-color:#1e91e5;padding:.9em;cursor:pointer;outline:none;text-transform:uppercase;opacity:.93;filter:alpha(opacity=93)}.option-button:hover{opacity:1;filter:alpha(opacity=100)}.toggle-button{background-color:transparent;color:#333;border:1px solid}.toggle-on{opacity:1;filter:alpha(opacity=100);cursor:initial}#success_button.toggle-on{color:#fff;border-color:#2AD14F;background-color:#2AD14F}#fail_button.toggle-on{color:#fff;border-color:#f63e43;background-color:#f63e43}#timeout_button.toggle-on{color:#fff;border-color:#E5B600;background-color:#E5B600}@media(max-width:500px){body{font-size:15px}.head{padding:8em 5% 5.5em}.head h1:before{position:absolute;top:.5em;left:50%;height:1.5em;width:1.6em;padding:0;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%);background-size:1.2em}#submit_button{width:20em;max-width:100%}}@media(min-width:1700px){body{font-size:17px}}</style>
+</head>
+<body>
+  <div class="head">
+    <h1 class="logo">Static Contact Form</h1>
+    <p>Simple, lightweight contact form for static sites. Emails included.</p>
+    <a class="github" href="https://github.com/henrygd/static-contact-form">View on Github</a>
+  </div>
+
+  <div class="main">
+    <div class="options">
+      <p>The form here will not actually send emails, but will allow you to see what it looks like in action.</p>
+      <div class="button-div">
+        <button id="reset_form" class="option-button">Reset form</button>
+        <button id="success_button" class="option-button toggle-button toggle-on">Successful Response</button>
+        <button id="timeout_button" class="option-button toggle-button">Timeout</button>
+        <button id="fail_button" class="option-button toggle-button">Failure</button>
+      </div>
+    </div>
+    <div id="static_contact_form"></div>
+  </div>
+
+<script>
+  // page-specific js to emulate send
+  !function(){function e(){var e=[];[r,u,m].forEach(function(n){n.value.length<1&&(e=["All fields must be filled in."],t(n,!0))}),n(u.value)||(e.push("Make sure email is valid."),t(u,!0)),e.length>0?s(e):c()}function n(e){return _.test(e)}function a(){var e=!1,a=this.value;0===a.length?e=!0:"cf_email"!==this.id||n(a)||(e=!0),t(this,e)}function t(e,n){var a=e.className,t=a.indexOf("error")>-1;n&&!t?e.className+=" cf-input-error":!n&&t&&(e.className=a.replace(" cf-input-error",""))}function s(e){var n="Please correct the following errors:\n";e.forEach(function(e,a){n+=a+1+". "+e+"\n"}),alert(n)}function c(){function e(e){setTimeout(function(){b||(v.showResponse({sent:!!e}))},1200)}l(),w.className.indexOf("toggle-on")>-1?e(1):y.className.indexOf("toggle-on")>-1&&e(0)}function l(){var n=25,a=0;b=0,d.removeEventListener("click",e,!1),function t(){if(!h&&!b){if(n>92)return void alert("Server may be down. Please email directly to "+f);n>70&&!a&&(a=1,p.className+=" cf-warn"),i(n),n+=Math.floor(180/n),setTimeout(t,15*n)}}()}function i(e){o(p,"scaleX(0."+e+")")}function o(e,n){e.style.cssText="-webkit-transform:"+n+";transform:"+n}var f,r,u,m,p,d,b,g,h,v=window.StaticContactForm={},_=/^[^\s@]+@[^\s@]+\.[^\s@]+$/,x=document,E="getElementById",w=x[E]("success_button"),y=x[E]("fail_button");v.initiate=function(n){x[E]("static_contact_form").insertAdjacentHTML("beforeend",'<span class="cf-input"><input class="cf-input-field" type="text" id="cf_name" maxlength="200"><label class="cf-label" for="cf_name"><span class="cf-label-content">Your Name</span></label></span><span class="cf-input"><input class="cf-input-field" type="email" id="cf_email" maxlength="200"><label class="cf-label" for="cf_email"><span class="cf-label-content">Your email address</span></label></span><span class="cf-input cf-textarea"><textarea class="cf-input-field" id="cf_message" maxlength="50000"></textarea><label class="cf-label" for="cf_message"><span class="cf-label-content">Message</span></label></span><button class="cf-button"><span>SEND</span><span id="cf_loader" class="loading-bar"></span></button>'),r=x[E]("cf_name"),u=x[E]("cf_email"),m=x[E]("cf_message"),p=x[E]("cf_loader"),d=p.parentElement,f=n.email,g=n.key,b=1,h=0,d.addEventListener("click",e,!1),[r,u,m].forEach(function(e){e.addEventListener("blur",a,!1)})},v.showResponse=function(e){var n=e.sent;h=1,o(p,"none"),setTimeout(function(){o(d,"scaleY(0)"),setTimeout(function(){var e;e=n?"Message sent. Thank you!":"Failed to send - Please email directly to "+f,d.innerHTML="<span>"+e+"</span>",d.className+=" cf-but-sent cf-but-"+n},350)},800)}}();
+
+  // initiate with empty params -- we don't need them here
+  StaticContactForm.initiate({
+    email: 'you@example.com',
+    key: ''
+  });
+
+  (function() {
+    var optionButtons = document.querySelectorAll('.toggle-button');
+    // toggle buttons
+    function toggleButttons() {
+      [].forEach.call(optionButtons, function(el) {
+        var classes = el.className;
+        if (classes.indexOf('toggle-on') !== -1)
+          el.className = classes.replace(' toggle-on', '');
+      });
+      this.className = this.className + ' toggle-on';
+    }
+    // toggle event listeners
+    [].forEach.call(optionButtons, function(el) {
+      el.addEventListener('click', toggleButttons, false);
+    });
+    // reset form button
+    document.getElementById('reset_form').addEventListener('click', function() {
+      document.getElementById('static_contact_form').innerHTML = '';
+      StaticContactForm.initiate({
+        email: 'you@example.com',
+        key: ''
+      });
+    });
+  })();
+</script>
+</body>
+</html>
