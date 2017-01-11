@@ -15,10 +15,10 @@ Generate a key for your form at the companion site below. Don't worry about anyt
 <script src="static-contact-form.js"></script>
 ```
 
-##### Give an element you want to hold the form an id of `static_contact_form`
+##### Add an empty form element with an id of `static_contact_form`
 
 ```html
-<div id="static_contact_form"></div>
+<form id="static_contact_form"></form>
 ```
 
 ##### Initiate the form

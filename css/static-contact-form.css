@@ -27,6 +27,8 @@
   transition: opacity .25s, transform .3s, -webkit-transform .3s; }
   .cf-button:hover, .cf-button:focus {
     opacity: 1; }
+  .cf-button[disabled] {
+    opacity: 1; }
   .cf-button span:first-of-type {
     position: relative;
     z-index: 1; }
@@ -56,9 +58,6 @@
       background-color: #E5B600; }
 
 .cf-but-sent {
-  opacity: 1;
-  cursor: initial;
-  text-transform: none;
   -webkit-transform: none !important;
           transform: none !important; }
 

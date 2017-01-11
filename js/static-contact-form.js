@@ -1,14 +1,14 @@
 // henrygd.me/static-contact-form
 (function() {
   var SCF = window.StaticContactForm = {},
+      key,
       email,
       inputName,
       inputEmail,
       inputMessage,
       loadingBar,
       button,
-      key,
-      loaderInterval,
+      submitted,
       fufilledPromise,
       emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
       doc = document,
@@ -17,7 +17,8 @@
 
   // create form, store elements, add event listeners
   SCF.initiate = function(opts) {
-    doc[getID]('static_contact_form').insertAdjacentHTML('beforeend', '<span class="cf-input"><input class="cf-input-field" type="text" id="cf_name" maxlength="255"><label class="cf-label" for="cf_name"><span class="cf-label-content">Your Name</span></label></span><span class="cf-input"><input class="cf-input-field" type="email" id="cf_email" maxlength="255"><label class="cf-label" for="cf_email"><span class="cf-label-content">Your email address</span></label></span><span class="cf-input cf-textarea"><textarea class="cf-input-field" id="cf_message" maxlength="10000"></textarea><label class="cf-label" for="cf_message"><span class="cf-label-content">Message</span></label></span><button class="cf-button"><span>SEND</span><span id="cf_loader" class="loading-bar"></span></button>');
+    var staticForm = doc[getID]('static_contact_form');
+    staticForm.innerHTML = '<span class="cf-input"><input class="cf-input-field" type="text" id="cf_name" maxlength="255"><label class="cf-label" for="cf_name"><span class="cf-label-content">Your Name</span></label></span><span class="cf-input"><input class="cf-input-field" type="email" id="cf_email" maxlength="255"><label class="cf-label" for="cf_email"><span class="cf-label-content">Your email address</span></label></span><span class="cf-input cf-textarea"><textarea class="cf-input-field" id="cf_message" maxlength="10000"></textarea><label class="cf-label" for="cf_message"><span class="cf-label-content">Message</span></label></span><button class="cf-button" type="submit"><span>SEND</span><span id="cf_loader" class="loading-bar"></span></button>';
     inputName = doc[getID]('cf_name');
     inputEmail = doc[getID]('cf_email');
     inputMessage = doc[getID]('cf_message');
@@ -25,16 +26,18 @@
     button = loadingBar.parentElement;
     email = opts.email;
     key = opts.key;
-    // on click handler for form button - pass to validate method
-    button.addEventListener('click', validateForm, false);
+    // form submit handler - pass to validate method
+    staticForm.onsubmit = validateForm;
     // on blur validation for input fields
     [inputName, inputEmail, inputMessage].forEach(function(input) {
-      input.addEventListener('blur', validateField, false);
+      input.onblur = validateField;
     });
   };
 
   // basic js form validation
-  function validateForm() {
+  function validateForm(e) {
+    e.preventDefault();
+    if (submitted) return;
     var errors = [];
     // check if all fields are filled
     [inputName, inputEmail, inputMessage].forEach(function(el) {
@@ -94,12 +97,12 @@
   function sendEmail(fromEmail, name, message) {
     showButtonLoader();
     var url = 'https://emailrelay.henrygd.me/sendmail' +
-                '?key=' + key +
-                '&email=' + encodeParam(email) +
-                '&fromEmail=' + encodeParam(fromEmail) + 
-                '&name=' + encodeParam(name) +
-                '&message=' + encodeParam(message) +
-                '&callback=' + 'StaticContactForm.showResponse';
+              '?key=' + key +
+              '&email=' + encodeParam(email) +
+              '&fromEmail=' + encodeParam(fromEmail) + 
+              '&name=' + encodeParam(name) +
+              '&message=' + encodeParam(message) +
+              '&callback=' + 'StaticContactForm.showResponse';
     var script = doc.createElement('script');
     script.onerror = function() {
       SCF.showResponse({sent: false});
@@ -134,7 +137,8 @@
   function showButtonLoader() {
     var percent = 25;
     var warning = 0;
-    button.removeEventListener('click', validateForm, false);
+    submitted = true;
+    button.setAttribute('disabled', true);
     (function loadIndicator() {
       if (fufilledPromise)
         return;

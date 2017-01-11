@@ -35,6 +35,9 @@ $warning-color: #E5B600; // yellow orange
   &:hover, &:focus {
     opacity: 1;
   }
+  &[disabled] {
+    opacity: 1;
+  }
   span:first-of-type {
     position: relative;
     z-index: 1;
@@ -65,9 +68,6 @@ $warning-color: #E5B600; // yellow orange
 }
 
 .cf-but-sent {
-  opacity: 1;
-  cursor: initial;
-  text-transform: none;
   transform: none!important;
 }
 
