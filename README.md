@@ -1,3 +1,7 @@
+# Email relay functionality ending October 2020
+
+Leaving this repo up for archival purposes only. Please do not use.
+
 ## ![logo](http://i.imgur.com/DAUBdg7.png) Static Contact Form
 
 Lightweight, responsive contact form that allows users to send up to 45 emails per week from static websites.
